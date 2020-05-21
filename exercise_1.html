@@ -4,46 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>web storage</title>
+    <script>
+        //mudar background fundo escuro
+        let botaoFundoTelaBlack = window.document.getElementById('btnCorFundoEscuro').addEventListener('click', trocaCorFundoEscuro);
+        let corDeFundoBlack = localStorage.corDeFundoBlack;
+        function trocaCorFundoEscuro(){
+            let corDeFundoBlack = document.body.style.backgroundColor = "black";
+            localStorage.setItem("corBlack", corDeFundoBlack);
+            let corBlack = localStorage.corBlack;
+        }
+        //mudar background fundo claro
+        let botaoFundoTelaWhite = window.document.getElementById('btnCorFundoClaro').addEventListener('click', trocaCorFundoClaro);
+        let corDeFundoWhite = localStorage.corDeFundoWhite;
+        function trocaCorFundoClaro(){
+            let corDeFundoWhite = document.body.style.backgroundColor = "white";
+            localStorage.setItem("corWhite", corDeFundoWhite);
+            let corWhite = localStorage.corWhite;
+        }
+        //mudar cor do texto
+        let botaoCorDoTextoBranco = window.document.getElementById('btnCorTexto').addEventListener('click', trocaCorTexto);
+        let corTextoClaro = localStorage.corTextoClaro;
+        function trocaCorTexto(){
+            let corTextoClaro1 = document.querySelectorAll('#texto1').style.color = "red";
+            localStorage.setItem("cor1", corTextoClaro1);
+            let cor = localStorage.cor1
+        }
+    </script>
 </head>
 <body>
     <header>
         <section>
-            <h1>Lorem Ipsum</h1>
+            <h1 id="texto">Lorem Ipsum</h1>
         </section>
+        <nav>
+            <button id="btnCorFundoEscuro" onclick="trocaCorFundoEscuro()">Fundo Escuro</button>
+            <button id="btnCorFundoClaro" onclick="trocaCorFundoClaro()">Fundo Claro</button>
+            <button id="btnCorTexto" onclick="trocaCorTexto()">cor do texto</button>
+            <button id="btnTamanhoFonte">Tamanho da fonte</button>
+            <button id="btnEspaco">Espaçamento entre as linhas</button>
+            <button id="btnTipoFonte">Tipo da fonte</button>
+        </nav>
     </header>
     <article>
-        <h2>What is Lorem Ipsum?</h2>
-        <p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        <h2 id="texto">What is Lorem Ipsum?</h2>
+        <p id="texto"><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
         but also the leap into electronic typesetting, remaining essentially unchanged.
         It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.</p>
     </article>
     <article>
-        <h2>What is Lorem Ipsum?</h2>
-        <p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        <h2 id="texto">What is Lorem Ipsum?</h2>
+        <p id="texto"><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
         but also the leap into electronic typesetting, remaining essentially unchanged.
         It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.</p>
     </article>
     <article>
-        <h2>What is Lorem Ipsum?</h2>
-        <p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        <h2 id="texto">What is Lorem Ipsum?</h2>
+        <p id="texto"><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
         but also the leap into electronic typesetting, remaining essentially unchanged.
         It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.</p>
     </article>
     <article>
-        <h2>What is Lorem Ipsum?</h2>
-        <p><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        <h2 id="texto1">What is Lorem Ipsum?</h2>
+        <p id="texto"><strong>Lorem Ipsum </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
         but also the leap into electronic typesetting, remaining essentially unchanged.
         It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.</p>
     </article>
-
 </body>
 </html>
